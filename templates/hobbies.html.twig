@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Loisirs & Projets{% endblock %}
+
+{% block body %}
+    <div class="jumbotron text-center bg-light p-5 rounded mb-4">
+        <h1 class="display-4">Qui suis-je en dehors de l'IUT ?</h1>
+        <p class="lead">Mes passions, mes loisirs et mes engagements personnels.</p>
+    </div>
+
+    <div class="row">
+        {# Passion 1 : Tech / Projets Perso #}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                {# Remplacez src par une vraie image ou gardez ce placeholder #}
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Coding" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Veille Technologique</h5>
+                    <p class="card-text">Je suis passionné par l'hardware et le montage de PC. J'ai récemment monté mon propre serveur NAS à la maison pour gérer mes sauvegardes.</p>
+                </div>
+                <div class="card-footer text-muted">Projet Personnel</div>
+            </div>
+        </div>
+
+        {# Passion 2 : Sport #}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Sport" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Sport & Esprit d'équipe</h5>
+                    <p class="card-text">Je pratique le [Votre Sport] depuis 5 ans. Cela m'a appris la persévérance et l'importance de la cohésion de groupe pour atteindre un objectif.</p>
+                </div>
+                <div class="card-footer text-muted">Loisir</div>
+            </div>
+        </div>
+
+        {# Passion 3 : Autre (Voyage, Musique, Photo...) #}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Paysage" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Photographie</h5>
+                    <p class="card-text">J'aime capturer des paysages lors de mes voyages. Vous pouvez voir un aperçu de ma galerie sur cette page.</p>
+                </div>
+                <div class="card-footer text-muted">Artistique</div>
+            </div>
+        </div>
+    </div>
+
+    {# Bouton retour Accueil #}
+    <div class="row mt-4 mb-5">
+        <div class="col-12 text-center">
+            <a href="{{ path('app_home') }}" class="btn btn-secondary">Retour à l'accueil (Back to Home)</a>
+        </div>
+    </div>
+{% endblock %}

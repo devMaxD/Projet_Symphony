@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon E-Portfolio - Compétences{% endblock %}
+
+{% block body %}
+    <div class="row text-center mb-5">
+        <div class="col-12">
+            <h1 class="display-5">Mon Portfolio de Compétences</h1>
+            <p class="lead">Retrouvez ici mes apprentissages critiques, preuves et analyses réflexives.</p>
+        </div>
+    </div>
+
+    {# Compétence 1 : Admin Réseaux #}
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3 class="text-primary border-bottom pb-2">Compétence RT1 : Administrer les réseaux et l'Internet</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        {# Apprentissage Critique 1 #}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 border-info">
+                <div class="card-header bg-info text-white">AC1 : Configurer les fonctions de base</div>
+                <div class="card-body">
+                    <h5 class="card-title">Réseau Local & VLANs</h5>
+                    <p class="card-text">
+                        Mise en place d'un réseau local avec segmentation par VLANs et routage inter-vlan.
+                    </p>
+                    <span class="badge bg-success mb-2">Niveau Acquis : 3/4</span>
+                    <br>
+                    {# Liens vers vos preuves (Drive ou PDF) [cite: 33] #}
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Voir la preuve (TP VLAN)</a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary mt-2">Analyse Réflexive</a>
+                </div>
+            </div>
+        </div>
+
+        {# Apprentissage Critique 2 #}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 border-info">
+                <div class="card-header bg-info text-white">AC2 : Services Réseaux</div>
+                <div class="card-body">
+                    <h5 class="card-title">DHCP & DNS sous Linux</h5>
+                    <p class="card-text">
+                        Installation et configuration de services réseaux essentiels sur une machine virtuelle Ubuntu.
+                    </p>
+                    <span class="badge bg-success mb-2">Niveau Acquis : 2/4</span>
+                    <br>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Voir la preuve (Compte rendu)</a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary mt-2">Analyse Réflexive</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Compétence 2 : Connecter les entreprises (Exemple à dupliquer) #}
+    <div class="row mb-4 mt-5">
+        <div class="col-12">
+            <h3 class="text-primary border-bottom pb-2">Compétence RT2 : Connecter les entreprises</h3>
+        </div>
+        <div class="col-md-12">
+            <div class="alert alert-dismissible alert-light">
+                Cette section sera complétée au fur et à mesure de mon acquisition de compétences en téléphonie et signal.
+            </div>
+        </div>
+    </div>
+{% endblock %}

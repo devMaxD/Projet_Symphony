@@ -2,16 +2,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+        <title>{% block title %}Mon E-Portfolio{% endblock %}</title>
+        {# Utilisation de Bootswatch (ici thème Lux, gratuit) [cite: 39] #}
+        <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {# Barre de navigation #}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ path('app_home') }}">Mon Profil R&T</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_home') }}">Home (En)</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_cv') }}">Mon CV (Fr)</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_portfolio') }}">Portfolio (Fr)</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="container mt-4">
+            {% block body %}{% endblock %}
+        </div>
+
+        {# Pied de page OBLIGATOIRE  #}
+        <footer class="bg-light text-center text-lg-start mt-5 py-3">
+            <div class="container">
+                <span class="text-muted">
+                    © 2025 Copyright : {{ 'now'|date('Y') }} - Reproduction interdite. 
+                    Site réalisé dans le cadre de la SAE 1.04 - IUT de Roanne.
+                </span>
+            </div>
+        </footer>
     </body>
 </html>

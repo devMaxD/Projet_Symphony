@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon CV - {{ 'now'|date('Y') }}{% endblock %}
+
+{% block body %}
+    {# En-tête avec le poste de vos rêves  #}
+    <div class="row mb-5 text-center">
+        <div class="col-12">
+            <h1 class="text-uppercase text-primary fw-bold">Administrateur Réseaux & Cybersécurité</h1>
+            <h3 class="text-muted">Mon objectif professionnel pour 2026</h3>
+            <hr class="w-25 mx-auto">
+        </div>
+    </div>
+
+    <div class="row">
+        {# Colonne Gauche : Infos & Compétences #}
+        <div class="col-md-4">
+            <div class="card mb-4 border-primary">
+                <div class="card-header bg-primary text-white">Profil</div>
+                <div class="card-body">
+                    <p><strong>Étudiant R&T</strong> motivé, passionné par l'architecture réseau et l'automatisation.</p>
+                </div>
+            </div>
+
+            {# Section Compétences  #}
+            <div class="card mb-4">
+                <div class="card-header">Compétences</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Administration Système (Linux/Windows)</li>
+                    <li class="list-group-item">Réseaux (Cisco, Routing, Switching)</li>
+                    <li class="list-group-item">Développement Web (Symfony, HTML/CSS)</li>
+                    <li class="list-group-item">Virtualisation (VMware, Docker)</li>
+                </ul>
+            </div>
+        </div>
+
+        {# Colonne Droite : Formations & Expériences #}
+        <div class="col-md-8">
+            
+            {# Section Formations  #}
+            <h3 class="text-primary"><i class="bi bi-mortarboard"></i> Formations</h3>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">BUT Réseaux et Télécommunications</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2025 - Présent | IUT de Roanne</h6>
+                    <p class="card-text">Apprentissage de l'administration réseaux, télécoms et développement web.</p>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Baccalauréat Général (Spécialités Maths/NSI)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2025 | Lycée [Votre Lycée]</h6>
+                    <p class="card-text">Mention Bien.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            {# Section Expériences Professionnelles  #}
+            <h3 class="text-primary mt-4"><i class="bi bi-briefcase"></i> Expériences Professionnelles</h3>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Stage Découverte Informatique</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Été 2024 | Entreprise XYZ</h6>
+                    <p class="card-text">Observation du service IT, aide au déploiement de postes clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Formulaire d'inscription pour impression  #}
+    <div class="row mt-5 p-4 bg-light border rounded">
+        <div class="col-12">
+            <h4><i class="bi bi-printer"></i> Télécharger mon CV au format PDF</h4>
+            <p>Veuillez remplir ce formulaire pour accéder au téléchargement.</p>
+            
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nomRecruteur" class="form-label">Nom / Entreprise</label>
+                        <input type="text" class="form-control" id="nomRecruteur" placeholder="Votre nom">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="emailRecruteur" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailRecruteur" placeholder="nom@exemple.com">
+                    </div>
+                </div>
+                {# Bouton d'action (simulé via JavaScript window.print()) #}
+                <button type="button" class="btn btn-success" onclick="window.print()">S'inscrire et Imprimer</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
