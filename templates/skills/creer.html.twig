@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer des Outils - Compétences{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron text-center bg-light p-5 rounded mb-4">
+            <h1 class="display-4">Créer des Outils et Applications informatiques</h1>
+            <p class="lead">Expertise en programmation et développement.</p>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-info">
+                            <tr>
+                                <th class="text-center">Compétences</th>
+                                <th class="text-center">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">Programmation</td>
+                                <td>Développement en PHP, Python, JavaScript</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Développement web</td>
+                                <td>Création d'applications web avec frameworks modernes</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Scripting réseau</td>
+                                <td>Automatisation des tâches réseau avec Python/CLI</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Base de données</td>
+                                <td>Conception et gestion de BD SQL/NoSQL</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Outils de monitoring</td>
+                                <td>Création d'outils de supervision et alerting réseau</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <button class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#modal-analyse">Voir Analyse</button>
+            </div>
+        </div>
+
+        {# Navigation entre les pages #}
+        <div class="row mb-5">
+            <div class="col-12">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="{{ path('app_skills_connecter') }}" class="btn btn-success">← Connecter</a>
+                    </div>
+                    <a href="{{ path('app_skills') }}" class="btn btn-secondary">Retour aux Compétences</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {# Modal Analyse #}
+    <div class="modal fade" id="modal-analyse" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Créer des Outils - Analyse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="mb-3">Analyse Réflexive</h6>
+                    <table class="table table-bordered mb-4">
+                        <tbody>
+                            <tr><td style="height: 150px;"></td></tr>
+                        </tbody>
+                    </table>
+                    <h6 class="mb-3">Document de Preuve</h6>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr><td style="height: 150px;"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

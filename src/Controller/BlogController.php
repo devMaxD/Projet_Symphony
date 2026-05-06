@@ -39,4 +39,32 @@ class BlogController extends AbstractController
     {
         return $this->render('/hobbies.html.twig');
     }
+
+    // Page Compétences (accueil)
+    #[Route('/skills', name: 'app_skills')]
+    public function skills(): Response
+    {
+        return $this->render('/skills.html.twig');
+    }
+
+    // Page Compétence Administrer
+    #[Route('/skills/administrer', name: 'app_skills_administrer')]
+    public function skillsAdministrer(): Response
+    {
+        return $this->render('/skills/administrer.html.twig');
+    }
+
+    // Page Compétence Connecter
+    #[Route('/skills/connecter', name: 'app_skills_connecter')]
+    public function skillsConnecter(): Response
+    {
+        return $this->render('/skills/connecter.html.twig');
+    }
+
+    // Page Compétence Créer des Outils
+    #[Route('/skills/creer', name: 'app_skills_creer')]
+    public function skillsCreer(): Response
+    {
+        return $this->render('/skills/creer.html.twig');
+    }
 }

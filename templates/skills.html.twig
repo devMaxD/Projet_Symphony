@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Compétences{% endblock %}
+
+{% block body %}
+    <div class="jumbotron text-center bg-light p-5 rounded mb-4">
+        <h1 class="display-4">Mes Compétences & Expertise</h1>
+        <p class="lead">Les domaines clés du BUT Réseaux et Télécommunications.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row g-4">
+                {# Compétence 1 : Administrer #}
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-primary mb-3">Administrer les Réseaux et l'Internet</h5>
+                            <p class="card-text mb-4">
+                                Architecture réseau, configuration d'équipements, protocoles, sécurité et monitoring.
+                            </p>
+                            <a href="{{ path('app_skills_administrer') }}" class="btn btn-primary">
+                                Voir les détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {# Compétence 2 : Connecter #}
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-success mb-3">Connecter les Entreprises et les Usagers</h5>
+                            <p class="card-text mb-4">
+                                Connectivité, téléphonie IP, réseaux sans-fil, interconnexion et support utilisateur.
+                            </p>
+                            <a href="{{ path('app_skills_connecter') }}" class="btn btn-success">
+                                Voir les détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {# Compétence 3 : Créer des Outils #}
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-info mb-3">Créer des Outils et Applications informatiques</h5>
+                            <p class="card-text mb-4">
+                                Programmation, développement web, scripting, bases de données et outils de monitoring.
+                            </p>
+                            <a href="{{ path('app_skills_creer') }}" class="btn btn-info">
+                                Voir les détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Bouton retour Accueil #}
+    <div class="row mt-5 mb-5">
+        <div class="col-12 text-center">
+            <a href="{{ path('app_home') }}" class="btn btn-secondary">Retour à l'accueil (Back to Home)</a>
+        </div>
+    </div>
+{% endblock %}
+

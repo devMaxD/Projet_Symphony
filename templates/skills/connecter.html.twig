@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connecter les Entreprises - Compétences{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron text-center bg-light p-5 rounded mb-4">
+            <h1 class="display-4">Connecter les Entreprises et les Usagers</h1>
+            <p class="lead">Expertise en connectivité et communication.</p>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-success">
+                            <tr>
+                                <th class="text-center">Compétences</th>
+                                <th class="text-center">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">Solutions de connectivité</td>
+                                <td>Mise en place de liaisons WAN, MPLS et SD-WAN</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Téléphonie IP</td>
+                                <td>Installation et configuration de systèmes VoIP</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Réseaux sans-fil</td>
+                                <td>Déploiement et optimisation de réseaux WiFi 5/6</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Interconnexion entreprises</td>
+                                <td>Configuration de connexions inter-sites sécurisées</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Support utilisateur</td>
+                                <td>Assistance et dépannage des services réseau</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#modal-analyse">Voir Analyse</button>
+            </div>
+        </div>
+
+        {# Navigation entre les pages #}
+        <div class="row mb-5">
+            <div class="col-12">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="{{ path('app_skills_administrer') }}" class="btn btn-primary">← Administrer</a>
+                    </div>
+                    <a href="{{ path('app_skills') }}" class="btn btn-secondary">Retour aux Compétences</a>
+                    <div>
+                        <a href="{{ path('app_skills_creer') }}" class="btn btn-info">Créer →</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {# Modal Analyse #}
+    <div class="modal fade" id="modal-analyse" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Connecter les Entreprises - Analyse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="mb-3">Analyse Réflexive</h6>
+                    <table class="table table-bordered mb-4">
+                        <tbody>
+                            <tr><td style="height: 150px;"></td></tr>
+                        </tbody>
+                    </table>
+                    <h6 class="mb-3">Document de Preuve</h6>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr><td style="height: 150px;"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
