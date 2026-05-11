@@ -2,66 +2,212 @@
 
 {% block title %}Mon E-Portfolio - Compétences{% endblock %}
 
+{% block stylesheets %}
+    <style>
+        .portfolio-hero {
+            background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+            border-radius: 2rem;
+            padding: 3.5rem 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 28px 70px rgba(15, 73, 105, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-hero::before,
+        .portfolio-hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.22;
+        }
+        .portfolio-hero::before {
+            width: 12rem;
+            height: 12rem;
+            background: rgba(49, 132, 255, 0.16);
+            top: -3rem;
+            left: -3rem;
+        }
+        .portfolio-hero::after {
+            width: 10rem;
+            height: 10rem;
+            background: rgba(16, 185, 129, 0.14);
+            bottom: -3rem;
+            right: -3rem;
+        }
+        .portfolio-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.15rem;
+            border-radius: 999px;
+            background: rgba(49, 132, 255, 0.14);
+            color: #084298;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-bottom: 1.3rem;
+        }
+        .hero-buttons .btn {
+            min-width: 11rem;
+            border-radius: 1rem;
+            padding: 0.9rem 1.4rem;
+            font-weight: 600;
+        }
+        .hero-quote {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #16477b;
+            max-width: 42rem;
+            margin: 0 auto 1.25rem;
+            position: relative;
+            padding: 1.35rem 1.5rem;
+            border-radius: 1.25rem;
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 18px 45px rgba(15, 73, 105, 0.08);
+        }
+        .hero-author {
+            margin-top: 0.85rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #1f4f8b;
+        }
+        .analysis-card {
+            border: none;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 24px 55px rgba(15, 73, 105, 0.08);
+        }
+        .analysis-card .card-header {
+            border-radius: 0;
+            background: #3178ff;
+            color: #fff;
+            padding: 1.25rem 1.5rem;
+        }
+        .analysis-card .card-body {
+            background: #ffffff;
+            padding: 1.5rem;
+        }
+        .section-anchor {
+            scroll-margin-top: 120px;
+        }
+        .analysis-badge {
+            display: inline-block;
+            padding: 0.45rem 0.85rem;
+            border-radius: 999px;
+            background: #ffe8a1;
+            color: #7a5c00;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <div class="row text-center mb-5">
-        <div class="col-12">
-            <h1 class="display-5">Mon Portfolio de Compétences</h1>
-            <p class="lead">Retrouvez ici mes apprentissages critiques, preuves et analyses réflexives.</p>
+    <div class="portfolio-hero text-center">
+        <div class="portfolio-pill">Analyse Réflexive</div>
+        <h1 class="display-5 mb-3">Portfolio de Compétences</h1>
+        <div class="hero-quote">
+            « Si tu t'affliges d'une cause extérieure, ce n'est pas elle qui t'importunes, c'est le jugement que tu portes sur elle. »
+            <div class="hero-author">— Marc Aurèle</div>
+        </div>
+        <div class="hero-buttons d-flex justify-content-center flex-wrap gap-3">
+            <a class="btn btn-primary btn-lg" href="#analysis-rt1">RT1 Administrer</a>
+            <a class="btn btn-outline-primary btn-lg" href="#analysis-rt2">RT2 Connecter</a>
+            <a class="btn btn-outline-primary btn-lg" href="#analysis-rt3">RT3 Créer</a>
         </div>
     </div>
 
-    {# Compétence 1 : Admin Réseaux #}
-    <div class="row mb-4">
+    <div class="row mb-4 section-anchor" id="analysis-rt1">
         <div class="col-12">
-            <h3 class="text-primary border-bottom pb-2">Compétence RT1 : Administrer les réseaux et l'Internet</h3>
+            <h2 class="h4 text-primary mb-2">RT1 : Administrer les réseaux et l'Internet</h2>
+            <p class="text-muted">Analyses liées à l'installation de postes, à la gestion de services et à l'administration système.</p>
         </div>
     </div>
 
-    <div class="row">
-        {# Apprentissage Critique 1 #}
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 border-info">
-                <div class="card-header bg-info text-white">AC1 : Configurer les fonctions de base</div>
+    <div class="row gx-4 gy-4 mb-5">
+        <div class="col-lg-6">
+            <div class="card analysis-card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">AC11.06 : Installer un poste client (Virtualisation)</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Réseau Local & VLANs</h5>
-                    <p class="card-text">
-                        Mise en place d'un réseau local avec segmentation par VLANs et routage inter-vlan.
-                    </p>
-                    <span class="badge bg-success mb-2">Niveau Acquis : 3/4</span>
-                    <br>
-                    {# Liens vers vos preuves (Drive ou PDF) [cite: 33] #}
-                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Voir la preuve (TP VLAN)</a>
-                    <a href="#" class="btn btn-sm btn-outline-secondary mt-2">Analyse Réflexive</a>
+                    <span class="analysis-badge">RT1</span>
+                    <p><strong>Étape 1 – EXPÉRIENCE :</strong> J'ai réalisé l'installation complète d'une machine virtuelle Ubuntu sur VirtualBox. Cela a impliqué le paramétrage du matériel (mémoire vive, disque dur virtuel) et la configuration du compte utilisateur "maxime".</p>
+                    <p><strong>Étape 2 – SENTIMENTS :</strong> Au départ, j'ai ressenti de l'appréhension face aux nombreuses options de configuration (stockage, processeur). La réussite de l'installation a été une grande source de confiance.</p>
+                    <p><strong>Étape 3 – ÉVALUATION :</strong> Ce qui a bien fonctionné : la fluidité de l'installation grâce à la préparation. Ce qui a été difficile : comprendre l'interaction réseau entre le système hôte et l'invité avant d'avoir installé les "Additions invités".</p>
+                    <p><strong>Étape 4 – ANALYSE :</strong> J'ai mobilisé des connaissances en architecture PC et OS. Mon document "How-to" sur VirtualBox sert de guide méthodologique pour garantir que chaque installation est identique et fonctionnelle.</p>
+                    <p><strong>Étape 5 – CONCLUSION :</strong> L'installation d'un poste est un processus rigoureux qui va au-delà du simple clic ; c'est la mise en place d'un environnement de travail isolé et sécurisé.</p>
+                    <p><strong>Étape 6 – PLAN D'ACTION :</strong> Je vais créer une image "Master" optimisée dans VirtualBox pour gagner du temps lors des futurs déploiements de postes de test.</p>
                 </div>
             </div>
         </div>
-
-        {# Apprentissage Critique 2 #}
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 border-info">
-                <div class="card-header bg-info text-white">AC2 : Services Réseaux</div>
+        <div class="col-lg-6">
+            <div class="card analysis-card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">AC11.04 : Maîtriser les systèmes pour la VoIP (FreePBX)</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">DHCP & DNS sous Linux</h5>
-                    <p class="card-text">
-                        Installation et configuration de services réseaux essentiels sur une machine virtuelle Ubuntu.
-                    </p>
-                    <span class="badge bg-success mb-2">Niveau Acquis : 2/4</span>
-                    <br>
-                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Voir la preuve (Compte rendu)</a>
-                    <a href="#" class="btn btn-sm btn-outline-secondary mt-2">Analyse Réflexive</a>
+                    <span class="analysis-badge">RT1</span>
+                    <p><strong>Étape 1 – EXPÉRIENCE :</strong> J'ai administré un serveur de téléphonie FreePBX. J'ai configuré des extensions SIP (numéros de postes internes) et établi des routes de sortie (Outbound Routes) pour permettre les appels vers l'extérieur.</p>
+                    <p><strong>Étape 2 – SENTIMENTS :</strong> J'ai ressenti une réelle satisfaction en voyant un terminal (softphone) s'enregistrer avec succès, mais aussi une certaine vigilance lors du paramétrage des routes, car une erreur bloque toute communication sortante.</p>
+                    <p><strong>Étape 3 – ÉVALUATION :</strong> Ce qui a bien fonctionné : la création méthodique des extensions avec leurs "secrets" de sécurité. Ce qui a été plus complexe : comprendre la logique de routage pour que le serveur sache quel "Trunk" utiliser pour chaque appel.</p>
+                    <p><strong>Étape 4 – ANALYSE :</strong> J'ai compris que la création d'une extension SIP consiste à déclarer un utilisateur dans le système pour lui permettre de s'authentifier. Le protocole SIP gère la signalisation, c'est-à-dire l'établissement de la liaison entre le serveur et le téléphone.</p>
+                    <p><strong>Étape 5 – CONCLUSION :</strong> L'administration d'un IP-PBX montre qu'un système d'exploitation bien configuré est la base indispensable d'un service de communication d'entreprise fiable.</p>
+                    <p><strong>Étape 6 – PLAN D'ACTION :</strong> Je vais m'exercer à configurer des fonctions de confort plus complexes, comme le Serveur Vocal Interactif (SVI) ou les groupes d'appels, afin d'être capable de répondre à des besoins d'organisation plus complets en entreprise.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    {# Compétence 2 : Connecter les entreprises (Exemple à dupliquer) #}
-    <div class="row mb-4 mt-5">
+    <div class="row mb-4 mt-5 section-anchor" id="analysis-rt2">
         <div class="col-12">
-            <h3 class="text-primary border-bottom pb-2">Compétence RT2 : Connecter les entreprises</h3>
+            <h2 class="h4 text-primary mb-2">RT2 : Connecter les entreprises</h2>
+            <p class="text-muted">Analyses portant sur la mesure, l'interprétation et le traitement des signaux.</p>
         </div>
-        <div class="col-md-12">
-            <div class="alert alert-dismissible alert-light">
-                Cette section sera complétée au fur et à mesure de mon acquisition de compétences en téléphonie et signal.
+    </div>
+
+    <div class="row gx-4 gy-4 mb-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+            <div class="card analysis-card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">AC12.01 : Mesurer et analyser les signaux</h5>
+                </div>
+                <div class="card-body">
+                    <span class="analysis-badge">RT2</span>
+                    <p><strong>Étape 1 – EXPÉRIENCE :</strong> J'ai analysé des signaux numériques pour en extraire des données, notamment par l'étude graphique des minima et des maxima.</p>
+                    <p><strong>Étape 2 – SENTIMENTS :</strong> J'ai trouvé stimulant de voir les mathématiques théoriques s'appliquer concrètement sur un signal physique réel.</p>
+                    <p><strong>Étape 3 – ÉVALUATION :</strong> L'identification des points clés du signal a été réussie. En revanche, l'utilisation des dérivées numériques pour détecter les changements de phase a été plus délicate.</p>
+                    <p><strong>Étape 4 – ANALYSE :</strong> Cette compétence mobilise des méthodes d'analyse de données essentielles pour comprendre la couche physique des réseaux.</p>
+                    <p><strong>Étape 5 – CONCLUSION :</strong> Une mesure précise est un préalable indispensable à toute administration réseau fiable.</p>
+                    <p><strong>Étape 6 – PLAN D'ACTION :</strong> Je vais rédiger une fiche de synthèse dans mon "How-to" regroupant les formules de traitement du signal utilisées en R2.06.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 mt-5 section-anchor" id="analysis-rt3">
+        <div class="col-12">
+            <h2 class="h4 text-primary mb-2">RT3 : Créer des outils et applications</h2>
+            <p class="text-muted">Analyse sur l'intégration de projets logiciels, l'orchestration et l'autonomie sur l'environnement.</p>
+        </div>
+    </div>
+
+    <div class="row gx-4 gy-4 mb-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+            <div class="card analysis-card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">AC13.02 : Lire, exécuter, corriger un programme (GitHub & Docker)</h5>
+                </div>
+                <div class="card-body">
+                    <span class="analysis-badge">RT3</span>
+                    <p><strong>Étape 1 – EXPÉRIENCE :</strong> J'ai utilisé git clone pour récupérer des projets, Composer pour les dépendances, et Docker pour orchestrer un site WordPress avec une base MariaDB.</p>
+                    <p><strong>Étape 2 – SENTIMENTS :</strong> Satisfaction lors du déploiement réussi, mais réel sentiment de challenge face aux erreurs d'environnement rencontrées en salle machine.</p>
+                    <p><strong>Étape 3 – ÉVALUATION :</strong> L'automatisation via scripts a bien fonctionné. La perte de données lors des premiers essais m'a forcé à approfondir la gestion des volumes.</p>
+                    <p><strong>Étape 4 – ANALYSE :</strong> La correction de bugs applicatifs nécessite une compréhension globale de l'environnement (mapping de ports, variables d'environnement).</p>
+                    <p><strong>Étape 5 – CONCLUSION :</strong> La persistance des données et l'isolation des services sont les points critiques du déploiement applicatif moderne.</p>
+                    <p><strong>Étape 6 – PLAN D'ACTION :</strong> Je vais m'exercer au débogage manuel des fichiers .env pour devenir plus autonome sur les erreurs de configuration.</p>
+                </div>
             </div>
         </div>
     </div>
